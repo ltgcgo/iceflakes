@@ -58,7 +58,7 @@
 		qbittorrent
 		uget
 		# IME
-		ibus-mozc
-		ibus-rime
+		ibus-engines.mozc
+		ibus-engines.rime
 	];
 }
