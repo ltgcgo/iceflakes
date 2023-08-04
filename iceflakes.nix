@@ -4,6 +4,9 @@
 		<nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares-plasma5.nix>
 		<nixpkgs/nixos/modules/installer/cd-dvd/channel.nix>
 	];
+	environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+		firefox
+	];
 	environment.systemPackages = [
 		pkgs.doas
 		pkgs.nftables
@@ -52,6 +55,10 @@
 		keepassxc
 		macchanger
 		veracrypt
+		# Gaming
+		heroic
+		lutris
+		wine
 		# Instant messaging
 		cinny-desktop
 		dino
@@ -74,5 +81,8 @@
 		tor
 		xray
 		yggdrasil
+		# Browser
+		firefox-beta
+		chromiumBeta
 	];
 }
