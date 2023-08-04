@@ -10,11 +10,13 @@
 	];
 	environment.defaultPackages = with pkgs; [
 		# CLI utilities
-		netcat
+		micro
+		neofetch
 		openssh
 		psmisc
 		pv
-		socat
+		screen
+		tree
 		zsh
 		# Compression and decompression
 		brotli
@@ -28,8 +30,11 @@
 		zopfli
 		# Network debugging
 		dig
+		netcat
+		socat
 		stuntman
 		tcptraceroute
+		traceroute
 		# Fonts
 		manrope
 		# Graphical app installation
@@ -60,5 +65,14 @@
 		# IME
 		ibus-engines.mozc
 		ibus-engines.rime
+		# Office
+		libreoffice
+		# Anonymizer
+		i2p
+		lokinet
+		sing-box
+		tor
+		xray
+		yggdrasil
 	];
 }
