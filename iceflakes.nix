@@ -92,11 +92,11 @@
 		podman-desktop
 		remmina
 	];
-	systemd.user.services.wallpaper = {
-		script = ''
-			bash <(curl -Ls https://github.com/ltgcgo/iceflakes/raw/main/scripts/getWallpaper.sh)
-		'';
-		wantedBy = [ "graphical-session.target" ];
-		partOf = [ "graphical-session.target" ];
-	};
+	#systemd.user.services.wallpaper = {
+	#	script = ''
+	#		bash <(curl -Ls https://github.com/ltgcgo/iceflakes/raw/main/scripts/getWallpaper.sh)
+	#	'';
+	#	wantedBy = [ "graphical-session.target" ];
+	#	partOf = [ "graphical-session.target" ];
+	#};
 }
