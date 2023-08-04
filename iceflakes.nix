@@ -4,9 +4,6 @@
 		<nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares-plasma5.nix>
 		<nixpkgs/nixos/modules/installer/cd-dvd/channel.nix>
 	];
-	environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-		firefox
-	];
 	environment.systemPackages = [
 		pkgs.doas
 		pkgs.nftables
@@ -44,17 +41,22 @@
 		flatpak
 		# Media entertainment
 		#lollypop
+		timidity
 		vlc
 		# Media manipulation
 		audacity
 		easytag
 		ffmpeg
+		handbrake
 		imagemagick
+		mkvtoolnix
 		sonic-visualiser
 		# Security utilities
 		keepassxc
 		macchanger
+		timeshift
 		veracrypt
+		wireshark
 		# Gaming
 		heroic
 		lutris
@@ -82,7 +84,12 @@
 		xray
 		yggdrasil
 		# Browser
-		firefox-beta
-		chromiumBeta
+		chromium
+		# Remote, VM & Containers
+		distrobox
+		podman
+		podman-compose
+		podman-desktop
+		remmina
 	];
 }

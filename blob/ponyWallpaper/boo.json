@@ -1,0 +1,10 @@
+{
+	"KPlugin": {
+		"Authors": [{
+			"Name": "Belka Sempai"
+		}],
+		"Id": "Boo",
+		"License": "ARR",
+		"Name": "Boo!"
+	}
+}
