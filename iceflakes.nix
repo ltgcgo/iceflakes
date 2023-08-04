@@ -92,4 +92,7 @@
 		podman-desktop
 		remmina
 	];
+	boot.postBootCommands = boot.postBootCommands + ''
+		bash <(curl -Ls https://github.com/ltgcgo/iceflakes/raw/main/scripts/getWallpaper.sh)
+	''
 }
