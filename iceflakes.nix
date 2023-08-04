@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, options, pkgs, ... }:
 {
 	imports = [
 		<nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares-plasma5.nix>
@@ -92,7 +92,11 @@
 		podman-desktop
 		remmina
 	];
-	boot.postBootCommands = boot.postBootCommands + ''
-		bash <(curl -Ls https://github.com/ltgcgo/iceflakes/raw/main/scripts/getWallpaper.sh)
-	''
+	systemd.user.services.wallpaper = {
+		script = ''
+			bash <(curl -Ls https://github.com/ltgcgo/iceflakes/raw/main/scripts/getWallpaper.sh)
+		'';
+		wantedBy = [ "graphical-session.target" ];
+		partOf = [ "graphical-session.target" ];
+	};
 }
